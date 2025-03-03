@@ -7,11 +7,12 @@ import Logout from "./pages/Logout";
 import StationDashboard from "./pages/StationDashboard";
 import GridDashboard from "./pages/GridDashboard";
 import Heatmaps from "./pages/Heatmaps";
-import GridStatus from "./pages/GridStatus";
+
 import Alerts from "./pages/Alerts";
 import PeakHour from "./pages/PeakHours";
 import Analytics from "./pages/Analytics";
 import NotFoundPage from "./pages/NotFoundPage";
+import GridStability from "./pages/gridStability";
 
 const Layout = () => {
   const location = useLocation();
@@ -27,13 +28,16 @@ const Layout = () => {
         {/* Grid (Distributor) Routes */}
         <Route path="/grid/dashboard" element={<GridDashboard />} />
         <Route path="/grid/heatmaps" element={<Heatmaps />} />
-        <Route path="/grid/status" element={<GridStatus />} />
+        <Route path="/grid/status" element={<GridStability />} />
         <Route path="/grid/alerts" element={<Alerts />} />
 
         {/* Charging Station Routes */}
         <Route path="/station/dashboard" element={<StationDashboard />} />
         <Route path="/station/peak-hours" element={<PeakHour />} />
-        <Route path="/station/analytics" element={<Analytics />} />
+        <Route path="/station/analytics" element={<Analytics />} /> 
+
+
+
 
         {/* Logout Redirects */}
         <Route path="/grid/logout" element={<Logout />} />

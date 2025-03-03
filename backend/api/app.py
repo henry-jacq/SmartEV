@@ -9,7 +9,7 @@ CORS(app)  # Enable CORS
 
 # Load models
 loaded_model = joblib.load("random_forest_model.pkl")  
-with open('grid_model.pkl', 'rb') as file:
+with open('./grid_model.pkl', 'rb') as file:
     grid_model = pickle.load(file)
 
 # Dummy dataset to calculate median kwhTotal

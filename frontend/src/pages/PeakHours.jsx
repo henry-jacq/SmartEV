@@ -22,10 +22,10 @@ const PeakHour = () => {
         setResponseData(null);
 
         try {
-            const response = await axios.get(`${apiUrl}/data`, {
-                params: { date } // Axios automatically handles query parameters
+            const response = await axios.post(`${apiUrl}`, {
+                 date  // Axios automatically handles query parameters
             });
-            setResponseData(response.data);
+            setResponseData(response.data["predicted_peak_hours"]);
         } catch (err) {
             setError(err.response?.data?.message || "Failed to fetch data");
         } finally {

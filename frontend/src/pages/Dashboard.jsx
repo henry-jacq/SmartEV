@@ -1,17 +1,34 @@
 import React from "react";
 import StatsCard from "../components/StatsCard";
 
+const stats = [
+    { id: 1, name: 'Active Stations', value: '12' },
+    { id: 2, name: 'Current Load', value: '320kW' },
+    { id: 3, name: 'Peak Demand', value: '450' },
+]
+
 const Dashboard = () => {
+            
+        
     return (
-        <div className="max-w-6xl mx-auto py-10 px-4">
-            <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <StatsCard title="Active Stations" value="12" />
-                <StatsCard title="Current Load" value="320 kW" />
-                <StatsCard title="Peak Demand" value="450 kW" />
+        <div className="bg-white py-24 sm:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                    {stats.map((stat) => (
+                        <div key={stat.id} className="mx-auto flex max-w-xs flex-col gap-y-4">
+                            <dt className="text-base/7 text-gray-600">{stat.name}</dt>
+                            <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                                {stat.value}
+                            </dd>
+                        </div>
+                    ))}
+                </dl>
             </div>
         </div>
     );
-};
+}
+          
+
+
 
 export default Dashboard;

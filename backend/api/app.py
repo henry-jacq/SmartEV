@@ -18,7 +18,7 @@ hourly_usage = pd.DataFrame({
 })
 
 # Load encoder and scaler (Ensure these files exist)
-encoder = joblib.load("encoder.pkl")
+encoder = joblib.load("label_encoder.pkl")
 scaler = joblib.load("scaler.pkl")
 
 def check_redirection(station_data):

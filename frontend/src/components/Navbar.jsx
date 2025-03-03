@@ -8,19 +8,21 @@ const Navbar = () => {
     let navItems = [];
 
     if (location.pathname === "/") {
-        // Home Page - Only Show Login
         navItems = [{ name: "Login", path: "/login" }];
     } else if (location.pathname.startsWith("/grid")) {
         navItems = [
-            { name: "Overview", path: "/grid/dashboard" },
-            { name: "Analytics", path: "/grid/analytics" },
-            { name: "Settings", path: "/grid/settings" },
+            { name: "Dashboard", path: "/grid/dashboard" },
+            { name: "Heatmaps", path: "/grid/heatmaps" },
+            { name: "Grid Status", path: "/grid/status" },
+            { name: "Alerts", path: "/grid/alerts" },
+            { name: "Logout", path: "/grid/logout"},
         ];
     } else if (location.pathname.startsWith("/station")) {
         navItems = [
             { name: "Dashboard", path: "/station/dashboard" },
-            { name: "Live Data", path: "/station/live-data" },
-            { name: "Reports", path: "/station/reports" },
+            { name: "Peak Hours", path: "/station/peak-hours" },
+            { name: "Analytics", path: "/station/analytics" },
+            { name: "Logout", path: "/station/logout" },
         ];
     }
 

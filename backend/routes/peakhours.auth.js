@@ -1,8 +1,8 @@
 import express from "express";
-import { getPeakHours } from "../controllers/peakhours.controller.js";
+import { PeakHours } from "../controllers/peakhours.controller.js";
 
 const router = express.Router();
 
-router.post("/getpeakhours", getPeakHours);
+router.post("/peakhours", PeakHours);
 
 export default router;

@@ -9,7 +9,7 @@ import GridDashboard from "./pages/GridDashboard";
 import Heatmaps from "./pages/Heatmaps";
 import GridStatus from "./pages/GridStatus";
 import Alerts from "./pages/Alerts";
-import PeakHours from "./pages/PeakHours";
+import PeakHour from "./pages/PeakHours";
 import Analytics from "./pages/Analytics";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -32,7 +32,7 @@ const Layout = () => {
 
         {/* Charging Station Routes */}
         <Route path="/station/dashboard" element={<StationDashboard />} />
-        <Route path="/station/peak-hours" element={<PeakHours />} />
+        <Route path="/station/peak-hours" element={<PeakHour />} />
         <Route path="/station/analytics" element={<Analytics />} />
 
         {/* Logout Redirects */}

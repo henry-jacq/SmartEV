@@ -9,7 +9,7 @@ CORS(app)  # Enable CORS
 # Load Pre-trained Model
 model = joblib.load("xgboost_peak_model.pkl")  # Ensure correct format
 
-@app.route('/predict', methods=['POST'])
+@app.route('/peakhours', methods=['POST'])
 def predict():
     data = request.json  # Expecting JSON input
     try:

@@ -1,14 +1,13 @@
-from flask import Flask, request, jsonify # type: ignore
+from flask import Flask, request, jsonify
 import pandas as pd
-import joblib  # Use joblib to load the model
-from flask_cors import CORS # type: ignore
+import joblib
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # Load Pre-trained Model
-model_path = "xgboost_peak_model.h5" 
-model = joblib.load(model_path)
+model = joblib.load("xgboost_peak_model.pkl")  # Ensure correct format
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -25,7 +24,7 @@ def predict():
                                   columns=['hour', 'day', 'month', 'kwhTotal'])
 
         # Make prediction
-        prediction = model.predict(input_data)[0]  # Get the first prediction
+        prediction = model.predict(input_data)[0]  # Get first prediction
 
         return jsonify({"prediction": int(prediction)})  # Convert to int for JSON response
     except Exception as e:

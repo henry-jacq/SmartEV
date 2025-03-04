@@ -23,9 +23,12 @@ const GridStability = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+
         setFormData({
             ...formData,
-            [name]: isNaN(value) ? value : Number(value),
+            [name]:
+                name === "grid_stability_score" ? parseFloat(value) || "" :
+                    isNaN(value) ? value : Number(value),
         });
     };
 
@@ -38,7 +41,7 @@ const GridStability = () => {
         try {
             const apiUrl = "http://127.0.0.1:5001/grid"; // Update API URL
             const res = await axios.post(apiUrl, formData);
-            setResponse(res.data);
+            setResponse(res.data["message"]);
         } catch (err) {
             setError(err.response?.data?.message || "API request failed.");
         } finally {

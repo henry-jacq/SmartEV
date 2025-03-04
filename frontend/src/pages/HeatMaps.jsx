@@ -1,5 +1,5 @@
 import React from "react";
-import { assets } from "../assets/assets.js"; // Import images from assets.js
+import { assets } from "../assets/assets";
 import { Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,

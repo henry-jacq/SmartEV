@@ -8,6 +8,7 @@ const NotFoundPage = () => {
             <p className="mb-4 text-gray-600">Page not found.</p>
             <Link to="/" className="text-blue-500 hover:underline">Go back to Home</Link>
         </div>
+        
     );
 };
 

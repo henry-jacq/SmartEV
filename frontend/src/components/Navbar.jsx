@@ -13,7 +13,7 @@ const Navbar = () => {
             {
                 name: "Login",
                 path: "/login",
-                icon: <FaSignInAlt className="inline mr-1 text-lg" />,
+                icon: <FaSignInAlt className="inline mr-1 text-xl" />, // Increased icon size
             },
         ];
     } else if (location.pathname.startsWith("/grid")) {
@@ -28,26 +28,26 @@ const Navbar = () => {
         navItems = [
             { name: "Dashboard", path: "/station/dashboard" },
             { name: "Peak Hours", path: "/station/peak-hours" },
-            { name: "Analytics", path: "/station/analytics" },
+            // { name: "Analytics", path: "/station/analytics" },
             { name: "Logout", path: "/station/logout" },
         ];
     }
 
     return (
-        <nav className="px-8 py-4 bg-gray-800 shadow-md">
-            <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <nav className="px-10 py-6 bg-gray-800 shadow-lg">
+            <div className="flex items-center justify-between max-w-7xl mx-auto">
                 {/* Logo */}
-                <h1 className="text-2xl font-bold tracking-wide text-white">
+                <h1 className="text-3xl font-bold tracking-wide text-white">
                     GridCharge
                 </h1>
 
                 {/* Navigation Items */}
-                <ul className="flex space-x-6">
+                <ul className="flex space-x-8">
                     {navItems.map((item, index) => (
                         <li key={index}>
                             <Link
                                 to={item.path}
-                                className={`text-lg font-medium justify-center align-middle transition ${location.pathname === item.path
+                                className={`text-xl font-medium justify-center align-middle transition ${location.pathname === item.path
                                         ? "text-indigo-400 font-semibold"
                                         : "text-white hover:text-indigo-300"
                                     }`}

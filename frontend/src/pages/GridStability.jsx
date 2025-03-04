@@ -40,7 +40,7 @@ const dummyData = [
         charging_time: 60,
         voltage_level: 200,
         current_flow: 80,
-        power_consumed: 5000,
+        power_consumed: 50000,
         power_loss: 500,
         predicted_power_demand: 6000,
         optimized_charging_power: 4000,

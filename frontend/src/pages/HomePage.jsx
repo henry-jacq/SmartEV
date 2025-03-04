@@ -6,7 +6,7 @@ const HomePage = () => {
             {/* Hero Section */}
             <header className="flex flex-col items-center justify-center px-6 py-20 text-center text-white bg-gray-800">
                 <h1 className="text-5xl font-extrabold leading-tight">
-                    Smart Grid Stabilization & EV Charging
+                    Smart Grid Stabilization & Charging Station Demand Prediction
                 </h1>
                 <p className="mt-4 text-lg opacity-90">
                     Optimizing power distribution for a sustainable future
